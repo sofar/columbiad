@@ -188,6 +188,7 @@ static void app_carousel_init(AppCarousel *self)
 
         wid = gtk_flow_box_new();
         gtk_flow_box_set_max_children_per_line(GTK_FLOW_BOX(wid), 1);
+        gtk_widget_set_can_focus(GTK_WIDGET(wid), true);
         gtk_orientable_set_orientation(GTK_ORIENTABLE(wid), GTK_ORIENTATION_VERTICAL);
         gtk_container_add(GTK_CONTAINER(self->scroll), wid);
         gtk_flow_box_set_sort_func(GTK_FLOW_BOX(wid), sort_items, NULL, NULL);
